@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin:0;
+}
+
+/* font for project */
+@font-face{
+  font-family:'Candal';
+  src: url('Candal-Regular.ttf');
+}
+
+/*   dimensions + font work */
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family:'Candal';
+    font-size: 2em
+    
+}
+
+/* gradient background */
+body {
+background-image: linear-gradient(to bottom right, #001f23,#007a75,#fcbe8e,#ff0021);
+}
+
+
+/* center opening word in the middle + font and styling for it */
+#opening {
+    text-align: center;
+    display: block;
+    color : #001f23;
+    font-family: 'Candal';
+}
+
+
+#closing {
+  text-align: center;
+  display:none;
+  color: #fcbe8e;
+  font-family: 'Candal';
+}
+ul li {
+    list-style: none;
+
+}
+
+li {
+    margin: 8px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5rem;
+}
+/*  colors for words  */
+#darkTeal {
+    color : #007a75;
+    opacity:1;
+}
+
+#teal {
+    color : #7caba1;
+    opacity:1;
+}
+
+#peach {
+    color : #fcbe8e;
+    opacity:1;
+}
+
+#red {
+    color : #ff0021;
+    opacity:1;
+}
+
+/* sizes for words */
+.small {
+    font-size: 0.5em;
+    
+}
+
+.medium {
+    font-size: 1em;
+    
+}
+
+.large {
+    font-size: 1.5em;
+    
+}
+
+.extraLarge {
+    font-size: 2em;
+    
+}
+
+
+/* word cloud itself */
+.firstCloud {
+    visibility: hidden;
+    padding: 1rem;
+}
+/*  button design  */
+#button{
+    visibility: hidden;
+    background-color: #001f23;
+    border:0.25em solid #faf9f6;
+    border-radius:2em;
+    box-sizing: border-box;
+    font-family:"Candal";
+    color:#faf9f6;
+    transition: all 0.4s;
+    width:12rem;
+    height:2rem;
+    font-size:0.3em;
+    margin-bottom: 14em
+    }
+    .button:hover{
+    color:#001f23;
+    background-color:#faf9f6;
+      cursor: pointer;
+    }
+    @media all and (max-width:30em){
+    .button{
+        display:block;
+        margin: auto;
+    }
+    }
+
+/*  class that gets added to word cloud to fade in  */
+.fadein {
+    animation: fadeIn 0.7s linear;
+}
+/* fadeout animation */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+    }
+/* class that gets added for object to fade out */
+.fadeout {
+  animation: fadeOut 0.7s linear;
+  animation-fill-mode: forwards;
+}
+
+
+/* fadein animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* container for word to center it at the opening */
+#openingcontainer {
+  display:grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#openingsmallword {
+  text-align: center;
+  font-family: Candal;
+  place-items: center;
+  color: #001f23;
+  display: block;
+  font-size: 25px;
+
+}
+
+#closing {
+  display: none;
+  background-color: #001f23;
+  place-items: center;
+  font-size: 25px;
+}
+
+#ghImg {
+  display: none;
+  place-items: center;
+}
+
+#closingcontainer {
+  display: grid;
+  place-items: center;
+}
+/*  wordcloud container including background change  */
+#firstcloudcontainer {
+  display: none;
+  background-color: #001f23
+}
+
+
+@keyframes exit-right-animation {
+from {
+  transform: translateX(0);
+}
+to {
+  transform: translateX(100%);
+}
+}
+
+@keyframes enter-left-animation {
+from {
+  transform: translateX(-100%);
+}
+to {
+  transform: translateX(0);
+}
+}
+
