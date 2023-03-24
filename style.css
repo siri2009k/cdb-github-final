@@ -181,10 +181,11 @@ ul {
   font-size: 25px;
 }
 
-#ghImg {
-  display: none;
-  place-items: center;
+#hyperlink {
+
+  color: #7caba1;
 }
+
 
 #closingcontainer {
   display: grid;

@@ -15,7 +15,6 @@ var largewords = document.getElementsByClassName('large')
 var xlwords = document.getElementsByClassName('extraLarge')
 var closing = document.getElementById('closing')
 var closingcontainer = document.getElementById('closingcontainer')
-var ghImg = document.getElementById('ghImg')
 //if button is pressed
 function pressed() {
     console.log("pressed")
@@ -25,7 +24,6 @@ function pressed() {
     function closings() {
     closing.classList.add('fadein')
     closing.style.display = "block";
-    ghImg.style.display = "block";
     closingcontainer.style.placeItems = 'center';
     }
     setTimeout(closings,500)
