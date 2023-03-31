@@ -15,8 +15,11 @@ var largewords = document.getElementsByClassName('large')
 var xlwords = document.getElementsByClassName('extraLarge')
 var closing = document.getElementById('closing')
 var closingcontainer = document.getElementById('closingcontainer')
+var firstCloudElement = document.getElementById("firstCloud")
+var firstCloudList = document.getElementsByTagName("li")
+
 //if button is pressed
-function pressed() {
+function pressed2() {
     console.log("pressed")
     firstcloud.classList.add('fadeout');
     button.classList.add('fadeout');
@@ -32,8 +35,19 @@ function pressed() {
 
 //switching from opening to wordcloud
 function showfirstcloud() {
-  console.log("showfirstcloud")
-  firstcloud.style.visibility = 'visible';
+  console.log("showfirstcloud");
+  firstcloud.style.visibility = "visible";
+  for(let i = 0; i<firstCloudList.length; i++){
+    console.log("forlooprunning");
+     var curWord = firstCloudList[i]; 
+     curWord.style.opacity = "0%"; 
+     curWord.classList.add('fadein'); 
+     var delay = Math.random()*10; 
+     curWord.style.animationDelay = delay + "s"; 
+     curWord.style.animationFillMode = "forwards"; 
+    console.log('wordsfadein');
+  }
+
   word.style.display = 'none';
   openingcontainer.style.display = 'none';
   button.style.visibility = 'visible';

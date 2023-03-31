@@ -38,7 +38,14 @@ background-image: linear-gradient(to bottom right, #001f23,#007a75,#fcbe8e,#ff00
   display:none;
   color: #fcbe8e;
   font-family: 'Candal';
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  position: fixed;
 }
+
+
 ul li {
     list-style: none;
 
@@ -78,31 +85,34 @@ ul {
 
 /* sizes for words */
 .small {
-    font-size: 0.5em;
+    font-size: 0.2em;
     
 }
 
 .medium {
-    font-size: 1em;
+    font-size: 0.4em;
     
 }
 
 .large {
-    font-size: 1.5em;
+    font-size: 0.7em;
     
 }
 
 .extraLarge {
-    font-size: 2em;
+    font-size: 0.9em;
     
 }
+
 
 
 /* word cloud itself */
 .firstCloud {
     visibility: hidden;
-    padding: 1rem;
+
 }
+
+
 /*  button design  */
 #button{
     visibility: hidden;
@@ -118,44 +128,51 @@ ul {
     font-size:0.3em;
     margin-bottom: 14em
     }
-    .button:hover{
-    color:#001f23;
-    background-color:#faf9f6;
-      cursor: pointer;
-    }
-    @media all and (max-width:30em){
-    .button{
-        display:block;
-        margin: auto;
-    }
-    }
 
+
+
+#button1 {
+  visibility: visible;
+  background-color: Transparent; 
+  border: 0.25em solid #001f23;
+  border-radius:2em;
+  box-sizing: border-box;
+  font-family:"Candal";
+  color:#001f23;
+  transition: all 0.4s;
+  width:14rem;
+  height:4rem;
+  font-size:0.3em;
+  margin-bottom: 14em
+
+}
 /*  class that gets added to word cloud to fade in  */
+
+/* fadeout animation */
 .fadein {
-    animation: fadeIn 0.7s linear;
+  animation: fadeIn 0.7s linear;
 }
 /* fadeout animation */
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-    }
+from { opacity: 1; }
+to { opacity: 0; }
+  }
 /* class that gets added for object to fade out */
 .fadeout {
-  animation: fadeOut 0.7s linear;
-  animation-fill-mode: forwards;
+animation: fadeOut 0.7s linear;
+animation-fill-mode: forwards;
 }
 
 
 /* fadein animation */
 @keyframes fadeIn {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
+0% {
+  opacity: 0%;
 }
-
+100% {
+  opacity: 100%;
+}
+}
 /* container for word to center it at the opening */
 #openingcontainer {
   display:grid;
@@ -164,6 +181,7 @@ ul {
   height: 100%;
 }
 
+
 #openingsmallword {
   text-align: center;
   font-family: Candal;
@@ -171,7 +189,6 @@ ul {
   color: #001f23;
   display: block;
   font-size: 25px;
-
 }
 
 #closing {
