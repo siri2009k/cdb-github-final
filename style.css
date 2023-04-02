@@ -1,19 +1,18 @@
+
+
 * {
   padding: 0;
   margin:0;
 }
 
 /* font for project */
-@font-face{
-  font-family:'Candal';
-  src: url('Candal-Regular.ttf');
-}
+
 
 /*   dimensions + font work */
 html,body{
     height: 100%;
     width: 100%;
-    font-family:'Candal';
+    font-family:'Tahoma';
     font-size: 2em
     
 }
@@ -29,7 +28,7 @@ background-image: linear-gradient(to bottom right, #001f23,#007a75,#fcbe8e,#ff00
     text-align: center;
     display: block;
     color : #001f23;
-    font-family: 'Candal';
+    font-family: 'Tahoma';
 }
 
 
@@ -37,7 +36,7 @@ background-image: linear-gradient(to bottom right, #001f23,#007a75,#fcbe8e,#ff00
   text-align: center;
   display:none;
   color: #fcbe8e;
-  font-family: 'Candal';
+  font-family: 'Tahoma';
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%);
@@ -85,22 +84,22 @@ ul {
 
 /* sizes for words */
 .small {
-    font-size: 0.2em;
+    font-size: 0.3em;
     
 }
 
 .medium {
-    font-size: 0.4em;
+    font-size: 0.5em;
     
 }
 
 .large {
-    font-size: 0.7em;
+    font-size: 0.8em;
     
 }
 
 .extraLarge {
-    font-size: 0.9em;
+    font-size: 1.2em;
     
 }
 
@@ -115,15 +114,16 @@ ul {
 
 /*  button design  */
 #button{
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
     background-color: #001f23;
     border:0.25em solid #faf9f6;
     border-radius:2em;
     box-sizing: border-box;
-    font-family:"Candal";
+    font-family:"Tahoma";
     color:#faf9f6;
     transition: all 0.4s;
-    width:12rem;
+    width:25rem;
     height:2rem;
     font-size:0.3em;
     margin-bottom: 14em
@@ -131,18 +131,18 @@ ul {
 
 
 
-#button1 {
+.button1 {
   visibility: visible;
   background-color: Transparent; 
-  border: 0.25em solid #001f23;
+  border: 0.15em solid #001f23;
   border-radius:2em;
   box-sizing: border-box;
-  font-family:"Candal";
+  font-family:"Tahoma";
   color:#001f23;
   transition: all 0.4s;
   width:14rem;
   height:4rem;
-  font-size:0.3em;
+  font-size:0.5em;
   margin-bottom: 14em
 
 }
@@ -150,7 +150,11 @@ ul {
 
 /* fadeout animation */
 .fadein {
-  animation: fadeIn 0.7s linear;
+  animation: fadeIn 7s linear;
+}
+
+.fadeinbutton {
+  animation: fadeIn 10s linear;
 }
 /* fadeout animation */
 @keyframes fadeOut {
@@ -159,7 +163,7 @@ to { opacity: 0; }
   }
 /* class that gets added for object to fade out */
 .fadeout {
-animation: fadeOut 0.7s linear;
+animation: fadeOut 7s linear;
 animation-fill-mode: forwards;
 }
 
@@ -184,7 +188,7 @@ animation-fill-mode: forwards;
 
 #openingsmallword {
   text-align: center;
-  font-family: Candal;
+  font-family: Tahoma;
   place-items: center;
   color: #001f23;
   display: block;
